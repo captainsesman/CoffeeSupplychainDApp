@@ -4,11 +4,11 @@ import "../coffeeaccesscontrol/RetailerRole.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
 import "../coffeeaccesscontrol/FarmerRole.sol";
 import "../coffeeaccesscontrol/DistributorRole.sol";
-import "../coffeecore/DistributorRole.sol";
+
+//import "../coffeecore/Ownable.sol";
 
 // Define a contract 'Supplychain'
 contract SupplyChain is
-    Ownable,
     DistributorRole,
     FarmerRole,
     RetailerRole,

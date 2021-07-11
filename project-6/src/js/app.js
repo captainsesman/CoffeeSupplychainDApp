@@ -52,7 +52,7 @@ App = {
             App.distributorID, 
             App.retailerID, 
             App.consumerID
-        );
+        );        
     },
 
     initWeb3: async function () {
