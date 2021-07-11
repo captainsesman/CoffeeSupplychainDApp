@@ -16,12 +16,12 @@ contract DistributorRole {
 
     // In the constructor make the address that deploys this contract the 1st distributor
     constructor() public {
-        _addDistributor(msg.sender());
+        _addDistributor(msg.sender);
     }
 
     // Define a modifier that checks to see if msg.sender has the appropriate role
     modifier onlyDistributor() {
-      require(isDistributor(msg.sender()););
+        require(isDistributor(msg.sender));
         _;
     }
 
@@ -32,12 +32,12 @@ contract DistributorRole {
 
     // Define a function 'addDistributor' that adds this role
     function addDistributor(address account) public onlyDistributor {
-      _addDistributor(account);
+        _addDistributor(account);
     }
 
     // Define a function 'renounceDistributor' to renounce this role
     function renounceDistributor() public {
-      _removeDistributor(msg.sender());
+        _removeDistributor(msg.sender);
     }
 
     // Define an internal function '_addDistributor' to add this role, called by 'addDistributor'
@@ -48,7 +48,7 @@ contract DistributorRole {
 
     // Define an internal function '_removeDistributor' to remove this role, called by 'removeDistributor'
     function _removeDistributor(address account) internal {
-      distributors.remove(account);
-      emit  RemoveDistributor(account);
+        distributors.remove(account);
+        emit RemoveDistributor(account);
     }
 }

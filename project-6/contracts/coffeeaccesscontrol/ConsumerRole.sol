@@ -15,12 +15,12 @@ contract ConsumerRole {
 
     // In the constructor make the address that deploys this contract the 1st consumer
     constructor() public {
-        _addConsumer(msg.sender());
+        _addConsumer(msg.sender);
     }
 
     // Define a modifier that checks to see if msg.sender has the appropriate role
     modifier onlyConsumer() {
-        require(isConsumer(msg.sender()));
+        require(isConsumer(msg.sender));
         _;
     }
 
@@ -36,7 +36,7 @@ contract ConsumerRole {
 
     // Define a function 'renounceConsumer' to renounce this role
     function renounceConsumer() public {
-        _removeConsumer(msg.sender());
+        _removeConsumer(msg.sender);
     }
 
     // Define an internal function '_addConsumer' to add this role, called by 'addConsumer'
