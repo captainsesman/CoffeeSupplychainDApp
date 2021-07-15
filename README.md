@@ -12,6 +12,11 @@ The DApp User Interface when running should look like...
 
 ![truffle test](images/ftc_transaction_history.png)
 
+![truffle test](images/rinkeby_screen_shot.jpg)
+
+## Rinkiby Network  Details
+* Transaction Hash: 0xefbd2bd5691d8e5aede5e3e034d487ca3f5e75bd218da3e4abf8fb19465adb87
+* Contract Address: 0x87036adf347be59929ae5f92be9e649498e5dfd3
 
 ## Getting Started
 
